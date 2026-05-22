@@ -1,41 +1,68 @@
-import {
-  Linkedin,
-  PersonVcard,
-  Building,
-  Youtube,
-} from "react-bootstrap-icons";
+import { SiteConfig } from "@/types/data";
 
-const data: Data = {
+// Authoritative content for the link board. Edit links here.
+// Writing is intentionally omitted for now — add a { key: "writing", ... }
+// entry and create app/writing/ when it's ready.
+const config: SiteConfig = {
   title: "Patrick Shubert",
-  theme: "light",
-  animation: {
-    nameRandomizer: false,
-  },
   name: "Patrick Shubert",
-  description: "",
+  role: "Credit Decisioning / Data Science",
+  tagline: "A few useful links, kept in one place.",
+  location: "Philadelphia / NYC",
+  updated: "May 2026",
+  pagesGlob: "shubert.us/*",
+  version: "v2026.5",
   links: [
     {
-      name: "Pat's LinkedIn",
-      url: "https://www.linkedin.com/in/patrickshubert",
-      icon: Linkedin,
+      key: "linkedin",
+      label: "LinkedIn",
+      host: "linkedin.com/in/patrickshubert",
+      href: "https://www.linkedin.com/in/patrickshubert",
+      note: "profile",
     },
     {
-      name: "Contact Details",
-      url: "https://linksta.cc/vcard/451732818",
-      icon: PersonVcard,
+      key: "vcard",
+      label: "Contact card",
+      host: "linksta.cc/vcard/451732818",
+      href: "https://linksta.cc/vcard/451732818",
+      note: "vCard",
     },
     {
-      name: "Ocrolus",
-      url: "https://www.ocrolus.com",
-      icon: Building,
+      key: "ocrolus",
+      label: "Ocrolus",
+      host: "ocrolus.com",
+      href: "https://www.ocrolus.com",
+      note: "vertical AI @ scale",
     },
     {
-      name: "Product Pulse: SMB Underwriting",
-      url: "https://www.youtube.com/watch?v=qpqDOhk1ow0&t=24s",
-      icon: Youtube,
+      key: "talks",
+      label: "Talks",
+      host: "shubert.us/talks",
+      href: "/talks",
+      note: "videos & podcasts",
+    },
+    {
+      key: "projects",
+      label: "Projects",
+      host: "shubert.us/projects",
+      href: "/projects",
+      note: "things i've built",
+    },
+    {
+      key: "email_work",
+      label: "Work email",
+      host: "PShubert@Ocrolus.com",
+      href: "mailto:PShubert@Ocrolus.com",
+      note: "build with us",
+    },
+    {
+      key: "email_personal",
+      label: "Personal email",
+      host: "Patrick.Shubert@gmail.com",
+      href: "mailto:Patrick.Shubert@gmail.com",
+      note: "say hi",
     },
   ],
-  sortByLength: false,
 };
 
-export default data;
+export default config;
