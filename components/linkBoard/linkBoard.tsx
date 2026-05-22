@@ -46,7 +46,7 @@ export default function LinkBoard() {
         />
         <InfoContainer>
           <Name>{randomizedName}</Name>
-          <Description>{data.description}</Description>
+          {data.description && <Description>{data.description}</Description>}
         </InfoContainer>
       </HeaderContainer>
       <LinksContainer $linksNumber={data.links.length}>

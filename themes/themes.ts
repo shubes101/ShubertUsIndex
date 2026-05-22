@@ -34,11 +34,11 @@ export const themes: Themes = {
   },
   light: {
     colors: {
-      title: "25, 25, 25",
-      text: "200, 200, 200",
-      image: "150, 150, 150",
-      background: "225, 225, 225",
-      border: "25, 25, 25",
+      title: "24, 24, 27",
+      text: "24, 24, 27",
+      image: "228, 228, 231",
+      background: "255, 255, 255",
+      border: "161, 161, 170",
     },
     fonts: ["K2D", "sans-serif"],
   },

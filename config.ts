@@ -1,77 +1,41 @@
 import {
-  Twitter,
-  Github,
   Linkedin,
-  EnvelopeFill,
-  Telegram,
-  Instagram,
-  Messenger,
-  Spotify,
-  Discord,
-  JournalAlbum,
+  PersonVcard,
+  Building,
+  Youtube,
 } from "react-bootstrap-icons";
 
 const data: Data = {
-  title: "Frank's Linkboard",
-  theme: "default",
+  title: "Patrick Shubert",
+  theme: "light",
   animation: {
     nameRandomizer: false,
   },
-  name: "Frank Borisjuk",
-  description: "Software Engineer",
+  name: "Patrick Shubert",
+  description: "",
   links: [
     {
-      name: "Twitter",
-      url: "https://twitter.com/hangerthem",
-      icon: Twitter,
-    },
-    {
-      name: "GitHub",
-      url: "https://github.com/hangerthem",
-      icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/franti%C5%A1ek-borisjuk-022686225/",
+      name: "Pat's LinkedIn",
+      url: "https://www.linkedin.com/in/patrickshubert",
       icon: Linkedin,
     },
     {
-      name: "Email",
-      url: "mailto:f.borisjuk@hangerthem.com",
-      icon: EnvelopeFill,
+      name: "Contact Details",
+      url: "https://linksta.cc/vcard/451732818",
+      icon: PersonVcard,
     },
     {
-      name: "Telegram",
-      url: "https://t.me/hangerthem",
-      icon: Telegram,
+      name: "Ocrolus",
+      url: "https://www.ocrolus.com",
+      icon: Building,
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/ferda_borisjuk/",
-      icon: Instagram,
-    },
-    {
-      name: "Messenger",
-      url: "https://m.me/frant.borisjukovic",
-      icon: Messenger,
-    },
-    {
-      name: "Spotify",
-      url: "https://open.spotify.com/user/jiguc8apyguwslzwptmx0e4zn",
-      icon: Spotify,
-    },
-    {
-      name: "Discord",
-      url: "https://discord.com/users/495134242825699328",
-      icon: Discord,
-    },
-    {
-      name: "Blog",
-      url: "https://blog.hangerthem.com",
-      icon: JournalAlbum,
+      name: "Product Pulse: SMB Underwriting",
+      url: "https://www.youtube.com/watch?v=qpqDOhk1ow0&t=24s",
+      icon: Youtube,
     },
   ],
-  sortByLength: true,
+  sortByLength: false,
 };
 
 export default data;
