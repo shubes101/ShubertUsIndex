@@ -23,8 +23,8 @@ const config: SiteConfig = {
     {
       key: "vcard",
       label: "Contact card",
-      host: "linksta.cc/vcard/451732818",
-      href: "https://linksta.cc/vcard/451732818",
+      host: "shubert.us/contact",
+      href: "/contact",
       note: "vCard",
     },
     {
