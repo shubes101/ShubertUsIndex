@@ -55,6 +55,27 @@ npm run dev
 
 Additionally, there are some animations you can toggle in `config.ts`, and you can choose to sort the links by their length to make the board look more organized.
 
+## Contact card (Cloudflare Turnstile)
+
+The `/contact` page offers a downloadable vCard. To keep the contact details
+(including the phone number) away from scrapers, the card is **never a static
+file** — it's served by `app/api/vcard/route.ts` only after a
+[Cloudflare Turnstile](https://www.cloudflare.com/products/turnstile/) token is
+verified server-side.
+
+Setup:
+
+1. In the Cloudflare dashboard, create a free Turnstile widget and add your
+   domain(s). You'll get a **site key** and a **secret key**.
+2. Copy `.env.example` to `.env.local` and fill in:
+   - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` — the public site key (used by the widget)
+   - `TURNSTILE_SECRET_KEY` — the secret key (used by the server to verify)
+3. Add both variables to your Vercel project (Settings → Environment Variables).
+
+To edit what's in the card, change the `VCARD` block in
+`app/api/vcard/route.ts`. Until real keys are set the widget renders with
+Cloudflare's test key, and in production the download fails closed.
+
 ## Credits
 
 This project is based on [LinkBoard](https://github.com/HangerThem/linkboard) by Frank Borisjuk (HangerThem), used under the terms of the AGPLv3 license.
