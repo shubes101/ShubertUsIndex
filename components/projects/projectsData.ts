@@ -51,4 +51,17 @@ export const PROJECTS: Project[] = [
     tileLabel: "SEASONAL",
     tileWordmark: "roto.shubert.us",
   },
+  {
+    href: "https://beerhawl.shubert.us",
+    tag: "WEB APP",
+    meta: "agent · SMB",
+    status: "live",
+    title: "Beer Hawl: Agent-Embedded Storefront",
+    host: "beerhawl.shubert.us",
+    description:
+      "An experiment in embedding an AI agent directly into a small-business website. The owner runs the site by text: the agent OCRs photos of printed menus, takes plain-language requests to add or pull items (temporarily or for good), and keeps the events calendar current — no dashboard required.",
+    cta: "open site",
+    tileLabel: "LIVE",
+    tileWordmark: "beerhawl.shubert.us",
+  },
 ];
