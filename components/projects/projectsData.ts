@@ -38,4 +38,17 @@ export const PROJECTS: Project[] = [
     tileLabel: "LIVE",
     tileWordmark: "credit.shubert.us",
   },
+  {
+    href: "https://roto.shubert.us",
+    tag: "WEB APP",
+    meta: "rotisserie · draft",
+    status: "seasonal",
+    title: "Roto Baseball Drafting Application",
+    host: "roto.shubert.us",
+    description:
+      "Runs my fantasy league's hybrid rotisserie draft from start to finish — configure teams and draft parameters, then track real-time analytics on your roster's relative standing as picks land. It drives interactive draft boards and pick logs for players in the room and those dialing in remotely. Built for a league that's run since 1980 — now multi-generational (my dad joined in the '80s).",
+    cta: "open app",
+    tileLabel: "SEASONAL",
+    tileWordmark: "roto.shubert.us",
+  },
 ];
