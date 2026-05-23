@@ -47,6 +47,7 @@ export default function Contact() {
   const widgetIdRef = useRef<string | null>(null);
   const [token, setToken] = useState<string | null>(null);
   const [phase, setPhase] = useState<Phase>("idle");
+  const [errCodes, setErrCodes] = useState("");
 
   useEffect(() => {
     let cancelled = false;
@@ -115,6 +116,15 @@ export default function Contact() {
         return;
       }
       if (!res.ok) {
+        let codes = "";
+        try {
+          const data = await res.json();
+          codes = Array.isArray(data?.codes) ? data.codes.join(", ") : "";
+        } catch {
+          /* non-JSON error body */
+        }
+        if (codes) console.error("Turnstile verification failed:", codes);
+        setErrCodes(codes);
         setPhase("error");
         resetWidget();
         return;
@@ -218,7 +228,10 @@ export default function Contact() {
           <Status $kind="ok">✓ Contact card downloaded — check your downloads.</Status>
         )}
         {phase === "error" && (
-          <Status $kind="err">Couldn&apos;t verify — please try again.</Status>
+          <Status $kind="err">
+            Couldn&apos;t verify{errCodes ? ` (${errCodes})` : ""} — please try
+            again.
+          </Status>
         )}
         {phase === "unconfigured" && (
           <Status $kind="info">

@@ -56,8 +56,9 @@ export async function POST(req: NextRequest) {
   const body = new URLSearchParams();
   body.append("secret", secret);
   body.append("response", token);
-  const ip = req.headers.get("CF-Connecting-IP") ?? req.ip;
-  if (ip) body.append("remoteip", ip);
+  // Deliberately NOT sending remoteip: on some hosts the IP seen here doesn't
+  // match the one that solved the challenge, which makes siteverify reject an
+  // otherwise-valid token.
 
   let outcome: SiteverifyResponse;
   try {
@@ -68,7 +69,14 @@ export async function POST(req: NextRequest) {
   }
 
   if (!outcome.success) {
-    return new Response("Verification failed", { status: 403 });
+    // Surface Cloudflare's error codes (not sensitive) to aid debugging.
+    return new Response(
+      JSON.stringify({
+        error: "verification-failed",
+        codes: outcome["error-codes"] ?? [],
+      }),
+      { status: 403, headers: { "Content-Type": "application/json" } }
+    );
   }
 
   return new Response(VCARD, {
