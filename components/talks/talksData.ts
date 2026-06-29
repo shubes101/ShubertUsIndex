@@ -26,6 +26,19 @@ export interface Talk {
 
 export const TALKS: Talk[] = [
   {
+    href: "https://www.youtube.com/watch?v=kQiF4ny70Ng",
+    videoId: "kQiF4ny70Ng",
+    corner: "YouTube",
+    tag: "VIDEO",
+    meta: "Ocrolus · Product Pulse",
+    duration: "~20 min",
+    title: "Product Pulse: Portfolio Management",
+    host: "youtu.be/kQiF4ny70Ng",
+    description:
+      "A walk through the full loan lifecycle with the Ocrolus product team — how Docs-to-Digital reconciles PDF bank statements against digital transaction data to catch tampering and undisclosed activity before funding, and how Post-Funding Analytics surfaces early cash-flow warning signals on a portfolio long before a borrower misses a payment.",
+    cta: "watch on youtube",
+  },
+  {
     href: "https://www.youtube.com/watch?v=45c-4PkRABI&t=887s",
     videoId: "45c-4PkRABI",
     corner: "YouTube",
