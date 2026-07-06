@@ -1,8 +1,6 @@
 import { SiteConfig } from "@/types/data";
 
 // Authoritative content for the link board. Edit links here.
-// Writing is intentionally omitted for now — add a { key: "writing", ... }
-// entry and create app/writing/ when it's ready.
 const config: SiteConfig = {
   title: "Patrick Shubert",
   name: "Patrick Shubert",
@@ -47,6 +45,13 @@ const config: SiteConfig = {
       host: "shubert.us/projects",
       href: "/projects",
       note: "things i've built",
+    },
+    {
+      key: "writing",
+      label: "Writing",
+      host: "shubert.us/writing",
+      href: "/writing",
+      note: "research & reports",
     },
     {
       key: "email_work",
