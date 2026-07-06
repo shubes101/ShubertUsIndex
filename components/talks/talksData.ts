@@ -26,6 +26,19 @@ export interface Talk {
 
 export const TALKS: Talk[] = [
   {
+    href: "https://www.youtube.com/watch?v=eHXaMqrk9HY",
+    videoId: "eHXaMqrk9HY",
+    corner: "YouTube",
+    tag: "VIDEO",
+    meta: "Ocrolus · Live Session",
+    duration: "~35 min",
+    title: "State of SMB Lending: Reading the Signals in Q1 2026",
+    host: "youtu.be/eHXaMqrk9HY",
+    description:
+      "A quarterly read on small-business borrower health, built from transaction-level data across 254,812 SMB loan applicants. The panel unpacks a Q1 2026 paradox — surface metrics like overdraft and NSF rates improved even as operating margins turned negative for the first time in nine quarters and debt-service coverage fell from 0.62x to 0.34x — and drills into the industry segments, from full-service restaurants to roofing and auto repair, feeling the sharpest cost and coverage pressure.",
+    cta: "watch on youtube",
+  },
+  {
     href: "https://www.youtube.com/watch?v=kQiF4ny70Ng",
     videoId: "kQiF4ny70Ng",
     corner: "YouTube",
