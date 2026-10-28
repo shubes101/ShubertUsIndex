@@ -196,7 +196,7 @@ export default function Contact() {
 
       <VerifyCard>
         <ContactName>Patrick Shubert</ContactName>
-        <ContactRole>Data Science Lead · Ocrolus</ContactRole>
+        <ContactRole>VP, Risk Performance &amp; Analytics · Oportun</ContactRole>
         <VerifyHint>
           Confirm you&apos;re human, then download the card (name, title, email,
           and phone).

@@ -7,9 +7,9 @@ const config: SiteConfig = {
   role: "Credit Decisioning / Data Science",
   tagline: "A few useful links, kept in one place.",
   location: "Philadelphia / NYC",
-  updated: "May 2026",
+  updated: "Oct 2026",
   pagesGlob: "shubert.us/*",
-  version: "v2026.5",
+  version: "v2026.10",
   links: [
     {
       key: "linkedin",
@@ -26,11 +26,11 @@ const config: SiteConfig = {
       note: "vCard",
     },
     {
-      key: "ocrolus",
-      label: "Ocrolus",
-      host: "ocrolus.com",
-      href: "https://www.ocrolus.com",
-      note: "vertical AI @ scale",
+      key: "oportun",
+      label: "Oportun",
+      host: "oportun.com",
+      href: "https://oportun.com",
+      note: "credit with purpose",
     },
     {
       key: "talks",
@@ -56,8 +56,8 @@ const config: SiteConfig = {
     {
       key: "email_work",
       label: "Work email",
-      host: "PShubert@Ocrolus.com",
-      href: "mailto:PShubert@Ocrolus.com",
+      host: "Patrick.Shubert@oportun.com",
+      href: "mailto:Patrick.Shubert@oportun.com",
       note: "build with us",
     },
     {
